@@ -1,0 +1,32 @@
+{
+  "name": "squid-workers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "ts-node src/__tests__/test.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "multi",
+    "threading",
+    "processing",
+    "worker"
+  ],
+  "author": "Rajeev N",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}
