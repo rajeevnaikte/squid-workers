@@ -1,5 +1,5 @@
 const runTask = (name: string) => {
-  return `You are ${name}`;
+  return `Hello ${name}`;
 };
 
 export default () => {

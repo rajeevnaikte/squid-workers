@@ -9,7 +9,7 @@ wh.send(`${__dirname}/task`)
 
 wh.send(`${__dirname}/task`, 'runTask', 'squid')
   .then(result => {
-    console.assert(result === 'You are squid'); // will print 'You are squid'
+    console.assert(result === 'Hello squid'); // will print 'Hello squid'
   });
 
 wh.close();
@@ -25,7 +25,7 @@ wh2.send(`${__dirname}/task`)
 
 wh2.send(`${__dirname}/task`, 'runTask', 'squid')
   .then(result => {
-    console.assert(result === 'You are squid'); // will print 'You are squid'
+    console.assert(result === 'Hello squid'); // will print 'Hello squid'
   });
 
 const wh3 = new WorkersHub(6);

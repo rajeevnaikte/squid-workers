@@ -5,7 +5,7 @@ Fork worker Nodes and send a module to run
 // task.js
 
 const runTask = (name) => {
-    return `You are ${name}`;
+    return `Hello ${name}`;
 };
 
 export default () => {
@@ -30,7 +30,7 @@ wh.send(`${__dirname}/task`)
 
 wh.send(`${__dirname}/task`, 'runTask', 'squid')
     .then(result => {
-        console.log(result); // will print 'You are squid'
+        console.log(result); // will print 'Hello squid'
     });
 
 wh.close(); // call close anytime, it will wait till all the workers are finished
@@ -54,9 +54,9 @@ wh.close();
 ```
 // output
 [
-  'You are squid',
-  'You are lobster',
-  'You are crab',
-  'You are scallop'
+  'Hello squid',
+  'Hello lobster',
+  'Hello crab',
+  'Hello scallop'
 ]
 ```
