@@ -1,7 +1,7 @@
 {
   "name": "squid-workers",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Multi-processing for NodeJS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -19,14 +19,20 @@
   ],
   "author": "Rajeev N",
   "license": "MIT",
-  "dependencies": {
-    "@types/node": "^13.9.0"
-  },
   "devDependencies": {
+    "@types/node": "^13.9.0",
     "@types/jest": "^25.1.2",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeevnaikte/squid-workers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajeevnaikte/squid-workers/issues"
+  },
+  "homepage": "https://github.com/rajeevnaikte/squid-workers#readme"
 }
