@@ -27,3 +27,16 @@ wh2.send(`${__dirname}/task`, 'runTask', 'squid')
   .then(result => {
     console.assert(result === 'You are squid'); // will print 'You are squid'
   });
+
+const wh3 = new WorkersHub(6);
+Promise.all([
+  'squid',
+  'lobster',
+  'crab',
+  'scallop'
+].map(item => wh3.send(`${__dirname}/task`, 'runTask', item)))
+  .then(results => {
+    console.assert(results.length === 4);
+  });
+
+wh3.close();

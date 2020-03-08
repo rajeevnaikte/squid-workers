@@ -58,18 +58,17 @@ export default class WorkersHub {
 
   private async getSubProcess() {
     return new Promise<SubProcessCache>((resolve, reject) => {
-      let timeoutCount = 0
+      let timeoutCount = 1
       const interval = setInterval(() => {
         const subProcess = this.subProcesses.find(sp => !sp.inUse)
         if (subProcess) {
           clearInterval(interval)
           subProcess.inUse = true
           resolve(subProcess)
-        } else if (timeoutCount * 200 > 15000) {
-          reject(Error('Timed out while waiting to get a subprocess.'))
-        } else {
-          timeoutCount++
+        } else if ((timeoutCount * 200) % 600000 === 0) {
+          console.warn(`Still waiting for a worker since ${timeoutCount * 200 / 1000} second.`)
         }
+        timeoutCount++
       }, 200)
     })
   }
