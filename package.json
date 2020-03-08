@@ -1,6 +1,6 @@
 {
   "name": "squid-workers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Multi-processing for NodeJS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,7 +15,10 @@
     "multi",
     "threading",
     "processing",
-    "worker"
+    "worker",
+    "cluster",
+    "multithreading",
+    "multiprocessing"
   ],
   "author": "Rajeev N",
   "license": "MIT",
